@@ -99,10 +99,10 @@ function insert(number)
         {
             document.getElementById('resultado').innerHTML = ""; // deixa o campo vazio
         }
-        function back()
+        function voltar()
         {
-            var resultado = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+            var resultadoExibido = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = resultadoExibido.substring(0, resultado.length -1); // percorre o intem e subtrai um elemento de cada vez
         }
         function calcular()
         {
