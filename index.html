@@ -90,14 +90,14 @@
     </div>
 	<script>
 
-function insert(num)
+function insert(number)
         {
-            var numero = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = numero + num;
+            const numero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = numero + number; // incrementa o elemento clicado na tela
         }
-        function clean()
+        function limpar()
         {
-            document.getElementById('resultado').innerHTML = "";
+            document.getElementById('resultado').innerHTML = ""; // deixa o campo vazio
         }
         function back()
         {
