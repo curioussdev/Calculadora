@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Calculadora</title>
 	<style>
-		 *{
+        *{
             margin: 0;
             padding: 0;
         }
@@ -48,11 +48,11 @@
             text-align: right;
             padding: 5px;
         }
-	</style>
+    </style>
 </head>
 <body>
-	<div class="fundo">
-        <h1>Anderson Piedade</h1>
+    <div class="fundo">
+        <h1>Anderson Piedade with Billadas</h1>
         <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
@@ -88,35 +88,33 @@
             </table>
         </div>
     </div>
-	<script>
+    <script>
+        function insert(number) {
+			
+            var numero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = numero + number; // inserir numero por botão
+        }; 
 
-function insert(number)
-        {
-            const numero = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = numero + number; // incrementa o elemento clicado na tela
-        }
-        function limpar()
-        {
-            document.getElementById('resultado').innerHTML = ""; // deixa o campo vazio
-        }
-        function voltar()
-        {
-            var resultadoExibido = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = resultadoExibido.substring(0, resultado.length -1); // percorre o intem e subtrai um elemento de cada vez
-        }
-        function calcular()
-        {
+        function limpar() {
+            document.getElementById('resultado').innerHTML = ""; // limpar o campo resultado
+        };
+
+        function voltar() {
+			// Voltar reduzinho uma casa
             var resultado = document.getElementById('resultado').innerHTML;
-            if(resultado)
-            {
-                document.getElementById('resultado').innerHTML = eval(resultado);
-            }
-            else
-            {
-                document.getElementById('resultado').innerHTML = "Nada..."
-            }
-        }
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+        };
 
-	</script>
+        function calcular() {
+			// A funçãoi eval serve para calcular as operações de matemáticas básicas como adição, sub, mult e divisão
+            var resultado = document.getElementById('resultado').innerHTML;
+            if(resultado) {
+                document.getElementById('resultado').innerHTML = eval(resultado);
+            } else {
+                document.getElementById('resultado').innerHTML = "vazio"
+            };
+        };
+
+    </script>
 </body>
 </html>
